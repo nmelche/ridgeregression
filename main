@@ -104,7 +104,7 @@ def grid_search(train, k, beta, stepsize, batchsize, itera, lambdaa, var):
                 bestgrmse.append((curr_min, step, lam))
     return grmse, bestgrmse
 
-data_ww_reg = pd.read_csv('C:/Users/nikla_000/Documents/UNI\Master/3. Semester/Lab Programming Machine Learning/EX3/winequality-red.csv', sep=";", header=0, names =['fixeda','volatileac', 'citricac', 'resudials', 'chlorides', 'fsd', 'tsd', 'density', 'pH', 'sulphates', 'alcohol', 'quality'])    
+data_ww_reg = pd.read_csv('.../winequality-red.csv', sep=";", header=0, names =['fixeda','volatileac', 'citricac', 'resudials', 'chlorides', 'fsd', 'tsd', 'density', 'pH', 'sulphates', 'alcohol', 'quality'])    
 ww_reg_norm = normalize(data_ww_reg)
 ww_reg_norm.insert(0, 'bias', 1)
 train, test = split(ww_reg_norm)
